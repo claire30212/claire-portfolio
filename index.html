@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>張慈芬作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: an editorial case file — each case reads left to right as 限制 → 解法 → 成果, one accent color carries the "result" column. */
+:root{
+  --paper:#FAF9F6;
+  --surface:#FFFFFF;
+  --ink:#23292D;
+  --muted:#5E676C;
+  --line:#E2DFD8;
+  --accent:#3F7A73;
+  --accent-soft:#E4EFEC;
+  --warm:#B8946A;
+  --font-display:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --font-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#16191B;--surface:#1E2225;--ink:#ECEAE5;--muted:#A3ABAF;--line:#33393D;
+    --accent:#7FBDB4;--accent-soft:#22332F;--warm:#D1B08A;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#16191B;--surface:#1E2225;--ink:#ECEAE5;--muted:#A3ABAF;--line:#33393D;
+  --accent:#7FBDB4;--accent-soft:#22332F;--warm:#D1B08A;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.75}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.3;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--font-mono);letter-spacing:.04em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+nav .name{font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px}
+nav ul a{color:var(--muted);text-decoration:none}
+nav ul a:hover{color:var(--accent)}
+@media (max-width:560px){nav ul{gap:12px;font-size:13px}}
+
+/* hero */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.hero .eyebrow{font-size:13px;color:var(--muted)}
+.hero h1{font-size:clamp(30px,5vw,52px);font-weight:900;letter-spacing:-.01em;margin:14px 0 18px;max-width:16em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{max-width:40em;color:var(--muted);font-size:17px;margin:0}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 40px;font-size:15px}
+.formula span{padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.formula span.r{background:var(--accent);border-color:var(--accent);color:var(--paper);font-weight:700}
+.formula i{font-style:normal;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line)}
+.stat{padding:20px 16px 0 0}
+.stat + .stat{padding-left:16px;border-left:1px solid var(--line)}
+.stat b{display:block;font-family:var(--font-display);font-size:clamp(26px,3.4vw,36px);font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat small{display:block;font-size:13px;color:var(--muted);line-height:1.5;margin-top:4px}
+@media (max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}.stat + .stat{border-left:0;padding-left:0}.stat{border-bottom:1px solid var(--line);padding-bottom:16px}}
+
+.skills{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px;border-top:1px solid var(--line)}
+.skills li{padding:16px 0;border-bottom:1px solid var(--line)}
+.skills b{display:block;font-size:17px;font-weight:900}
+.skills span{display:block;font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5}
+@media (max-width:820px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.skills{grid-template-columns:1fr}}
+/* sections */
+section{padding:72px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:32px}
+.sec-head h2{font-size:clamp(26px,3.5vw,34px)}
+.sec-head .mono{font-size:13px;color:var(--warm)}
+
+/* about */
+.portrait{display:flex;gap:20px;align-items:center;margin-bottom:24px}
+.portrait img{width:132px;height:165px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.portrait b{display:block;font-size:22px;font-weight:900;font-family:var(--font-display)}
+.portrait span{font-size:14px;color:var(--muted)}
+
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+.about p{margin:0 0 16px;max-width:36em}
+.caps{display:grid;gap:12px;margin-top:24px}
+.cap{padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.cap b{display:block}
+.cap span{font-size:14px;color:var(--muted)}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 18px 20px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--line)}
+.timeline li:first-child::before{border-color:var(--accent);background:var(--accent)}
+.timeline .when{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.timeline b{display:block;font-size:15px}
+.timeline span{font-size:14px;color:var(--muted)}
+.meta-block{margin-top:24px;font-size:14px;color:var(--muted)}
+.meta-block b{color:var(--ink)}
+@media (max-width:820px){.about{grid-template-columns:1fr;gap:32px}}
+
+/* cases */
+.case{padding:40px 0;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+.case-top{display:flex;gap:20px;align-items:baseline;flex-wrap:wrap}
+.case-num{font-family:var(--font-mono);font-size:14px;color:var(--warm)}
+.case h3{font-size:clamp(21px,2.6vw,26px);flex:1;min-width:16em}
+.case-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 22px;font-size:14px;color:var(--muted)}
+.case-meta b{color:var(--ink);font-weight:500}
+.prs{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:12px}
+.prs > div{padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.prs .label{display:block;font-size:12px;font-family:var(--font-mono);color:var(--muted);margin-bottom:6px}
+.prs p{margin:0;font-size:15px;line-height:1.7}
+.prs > div.res{background:var(--accent-soft);border-color:transparent}
+.prs > div.res .label{color:var(--accent)}
+.prs > div.res p{font-weight:500}
+@media (max-width:820px){.prs{grid-template-columns:1fr}}
+.case-body{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;align-items:start}
+.case-body.single{grid-template-columns:1fr}
+figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+figure img{width:100%}
+figure.tall img{max-height:520px;object-fit:cover;object-position:top}
+figcaption{font-size:13px;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tag{font-size:12px;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+@media (max-width:820px){.case-body{grid-template-columns:1fr}}
+
+.think{margin:8px 0 0;padding-left:18px;font-size:15px;line-height:1.7}
+.think li{margin-bottom:6px}
+.photos3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.photos3 figure{display:flex;flex-direction:column}
+.photos3 img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center}
+.photos3 img.pos-r{object-position:72% center}
+.photos3 figcaption{flex:1}
+@media (max-width:720px){.photos3{grid-template-columns:1fr}}
+.an-jump{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 8px}
+.an-jump a{display:block;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:var(--ink);transition:border-color .2s}
+.an-jump a:hover{border-color:var(--accent)}
+.an-jump .mono{display:block;font-size:12px;color:var(--warm)}
+.an-jump b{font-size:15px}
+.an{scroll-margin-top:80px;margin-top:36px;padding-top:28px;border-top:2px solid var(--ink)}
+.an-head{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.an-no{font-family:var(--font-display);font-size:44px;font-weight:900;line-height:1;color:var(--warm)}
+.an-head h4{margin:0;font-size:20px}
+.an-head p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+@media (max-width:700px){.an-jump{grid-template-columns:1fr}}
+.sub-case{margin-top:28px;padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.sub-case h4{margin:0;font-size:17px}
+.sub-lead{margin:6px 0 14px;font-size:15px;color:var(--muted)}
+.mini-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.mini-stats div{padding:10px 12px;background:var(--accent-soft);border-radius:8px}
+.mini-stats b{display:block;font-size:22px;font-weight:900;color:var(--accent);font-variant-numeric:tabular-nums}
+.mini-stats span{font-size:12px;color:var(--muted)}
+@media (max-width:720px){.mini-stats{grid-template-columns:repeat(2,1fr)}}
+/* charts */
+.chart{padding:16px 18px 10px}
+.chart h4{margin:0 0 2px;font-size:15px;font-family:var(--font-body)}
+.chart .sub{font-size:13px;color:var(--muted);margin:0}
+.chart svg{width:100%;height:auto;display:block;margin-top:8px}
+.chart svg text{fill:var(--muted);font-family:var(--font-body);font-size:11px}
+.chart svg .end{fill:var(--ink);font-weight:700;font-size:12px}
+.mechanics{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.mechanics span{font-size:13px;padding:3px 10px;border-radius:6px;background:var(--surface);border:1px solid var(--line)}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+
+/* before/after */
+.ba{padding:18px}
+.ba-row{display:grid;grid-template-columns:5em 1fr;gap:12px;align-items:center;margin-bottom:14px}
+.ba-row:last-child{margin-bottom:0}
+.ba-row > span{font-size:14px;font-weight:500}
+.bars{display:grid;gap:6px}
+.bar{height:26px;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-size:13px;white-space:nowrap}
+.bar.before{background:var(--line);color:var(--ink)}
+.bar.after{background:var(--accent);color:var(--paper);font-weight:700}
+
+
+
+
+/* overview cards */
+.intro{max-width:42em;color:var(--muted);margin:-12px 0 28px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ccard{display:flex;flex-direction:column;gap:6px;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.ccard:hover{border-color:var(--accent);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.ccard{transition:none}.ccard:hover{transform:none}}
+.ccard .cnum{font-family:var(--font-mono);font-size:12px;color:var(--warm)}
+.ccard .cbig{font-family:var(--font-display);font-weight:900;font-size:34px;line-height:1.15;color:var(--accent);font-variant-numeric:tabular-nums;margin-top:6px}
+.ccard .cline{font-size:14px;color:var(--muted);line-height:1.6}
+.ccard h3{font-size:16px;font-weight:700;margin-top:10px;padding-top:12px;border-top:1px solid var(--line)}
+.ccard .cgo{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;color:var(--accent)}
+.ccard.feat{background:var(--accent-soft);border-color:transparent}
+.ccard.feat .cbig{font-size:40px}
+.ccard.wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;column-gap:32px;align-items:center}
+.ccard.wide .cnum{grid-column:1/-1}
+.ccard.wide .cbig{grid-row:2 / span 3;margin-top:0}
+.ccard.wide .cline,.ccard.wide h3,.ccard.wide .cgo{grid-column:2}
+.ccard.wide h3{border-top:0;padding-top:0;margin-top:4px}
+@media (max-width:560px){.ccard.wide{display:flex}}
+@media (max-width:900px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cgrid{grid-template-columns:1fr}}
+#case-view{padding:32px 0 72px}
+#case-view .case{border-top:0;padding-top:16px}
+.back{display:inline-block;font-size:14px;font-weight:700;text-decoration:none;margin-bottom:8px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;font-weight:700}
+.pager a{text-decoration:none}
+.copy{margin-left:8px;font:inherit;font-size:14px;padding:9px 14px;border-radius:8px;border:1px solid color-mix(in srgb,var(--paper) 40%,transparent);background:transparent;color:var(--paper);cursor:pointer}
+.copy:hover{background:color-mix(in srgb,var(--paper) 12%,transparent)}
+.copied{margin-left:10px;font-size:13px}
+
+
+.sub-h{font-size:22px;margin:48px 0 16px}
+/* career timeline */
+.early-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.early-list li{padding:0!important;font-size:13px;color:var(--muted);line-height:1.6}
+.early-list li::before{display:none}
+.early-list b{color:var(--ink);font-weight:700}
+.career{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;position:relative}
+.career::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.career li{position:relative;padding:30px 16px 0 0}
+.career li::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--warm)}
+.career li.now::before{background:var(--accent);border-color:var(--accent)}
+.career .cy{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.career .cco{display:block;font-size:16px;margin-top:4px}
+.career .cti{display:block;font-size:13px;color:var(--muted)}
+.career .cab{margin:12px 0 6px;font-size:15px;font-weight:700;color:var(--accent);line-height:1.6}
+.career .cev{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+@media (max-width:900px){
+  .career{grid-template-columns:1fr}
+  .career::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .career li{padding:0 0 24px 32px}
+  .career li::before{top:4px}
+}
+
+/* stacked bar + compare */
+.cmp{display:grid;grid-template-columns:auto 1fr 1fr;gap:0;font-size:14px;padding:6px 0}
+.cmp div{padding:10px 14px;border-bottom:1px solid var(--line)}
+.cmp div:nth-last-child(-n+3){border-bottom:0}
+.cmp .h{font-size:12px;color:var(--muted);font-family:var(--font-mono)}
+.cmp b{font-family:var(--font-display);font-size:18px;font-variant-numeric:tabular-nums}
+.incent{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.incent div{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:14px}
+.incent b{display:block;color:var(--accent);font-size:15px}
+@media (max-width:720px){.incent{grid-template-columns:1fr}}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.early{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.early div{padding:14px 16px;border-left:3px solid var(--warm);background:var(--surface)}
+.early .when{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.early b{display:block;font-size:15px}
+.early p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+@media (max-width:820px){.early{grid-template-columns:1fr}}
+
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vid{border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.vid .thumb{aspect-ratio:4/3;overflow:hidden;background:var(--line);position:relative}
+.vid .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.vid .fmt{position:absolute;left:10px;top:10px;font-size:12px;padding:2px 8px;border-radius:999px;background:color-mix(in srgb,var(--ink) 82%,transparent);color:var(--paper)}
+.vid .vb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.vid h3{font-size:16px;font-family:var(--font-body);font-weight:700;line-height:1.5}
+.vid p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.vid .role{font-size:12px;color:var(--warm);font-family:var(--font-mono);letter-spacing:.02em}
+.vid .kpi{margin-top:auto;padding-top:6px;font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.vid .kpi b{font-family:var(--font-display);font-size:18px;color:var(--accent)}
+a.vid:hover h3{color:var(--accent)}
+.vid.pending{border-style:dashed;background:transparent}
+.vid.pending .thumb{display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-family:var(--font-mono);font-size:13px}
+@media (max-width:900px){.vids{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.vids{grid-template-columns:1fr}}
+
+/* side projects */
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.work{border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden;display:flex;flex-direction:column}
+.cover.pic{aspect-ratio:16/9;padding:0;display:block;background:#EFE9DF}
+.cover.pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.work:hover .cover.pic img{transform:scale(1.03)}
+.cover.pic .kind{position:absolute;left:14px;bottom:12px;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.88);color:#3d3a36}
+.cover{aspect-ratio:16/7;display:flex;align-items:flex-end;padding:18px 20px;position:relative;overflow:hidden}
+.cover .kind{font-family:var(--font-mono);font-size:12px;position:relative}
+.cover .big{position:absolute;right:16px;top:8px;font-family:var(--font-display);font-weight:800;font-size:64px;line-height:1;opacity:.9}
+.c1{background:#2E3438;color:#F1EBDD}.c1 .big{color:#C9A46A}
+.c2{background:#DCE8E4;color:#23413D}.c2 .big{color:#3F7A73}
+.c3{background:#F3E3C9;color:#5A4021}.c3 .big{color:#B8946A}
+.c4{background:#E9E1EC;color:#4A3954}.c4 .big{color:#8E6E9E}
+.work-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work h3{font-size:19px}
+.work p{margin:0;font-size:15px;color:var(--muted)}
+.work p b{color:var(--ink);font-weight:500}
+.work .go{margin-top:auto;font-size:14px;font-weight:700;text-decoration:none}
+.work .go:hover{text-decoration:underline}
+@media (max-width:720px){.works{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact h2{font-size:clamp(26px,3.5vw,34px)}
+.contact p{color:color-mix(in srgb,var(--paper) 78%,transparent);max-width:36em}
+.contact .addr{font-family:var(--font-mono);font-size:15px;padding:10px 16px;border:1px dashed color-mix(in srgb,var(--paper) 40%,transparent);border-radius:8px;display:inline-block;margin-top:8px}
+footer{padding:20px 0 32px;font-size:12px;color:var(--muted)}
+/* about v4 */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.ab-hero{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center}
+.ab-photo{position:relative;border:0;background:none;overflow:visible}
+.ab-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid var(--warm);border-radius:18px;transition:transform .5s ease}
+.ab-photo:hover::before{transform:translate(-8px,-8px)}
+.ab-photo img{position:relative;width:100%;height:auto;max-height:none;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block}
+.ab-eyebrow{font-size:12px;color:var(--warm);margin:0 0 10px}
+.ab-name{font-size:clamp(30px,4vw,42px);font-weight:900}
+.ab-name span{font-weight:300;color:var(--muted);margin-left:6px}
+.ab-role{color:var(--muted);margin:6px 0 22px}
+.ab-quote{font-size:clamp(18px,2.2vw,22px);line-height:1.6;font-weight:500;color:var(--accent);margin:0 0 28px;padding-left:18px;border-left:3px solid var(--warm)}
+.ab-nums{display:grid;grid-template-columns:repeat(3,1fr);margin:0;border-top:1px solid var(--line)}
+.ab-nums div{padding:16px 12px 0 0}
+.ab-nums div+div{padding-left:16px;border-left:1px solid var(--line)}
+.ab-nums dt b{font-family:var(--font-display);font-size:clamp(32px,4vw,44px);font-weight:800;font-variant-numeric:tabular-nums}
+.ab-nums dt i{font-style:normal;font-size:15px;font-weight:700;color:var(--warm);margin-left:3px}
+.ab-nums dd{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.ab-story{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:56px 0 28px}
+.ab-story p{margin:0;color:var(--ink)}
+.ab-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ab-cap{padding:22px 22px 20px;background:var(--surface);border:1px solid var(--line);border-radius:14px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,opacity .7s ease}
+.ab-cap:hover{transform:translateY(-4px);box-shadow:0 12px 28px -18px rgba(0,0,0,.35);border-color:var(--accent)}
+.ab-cap span{font-size:12px;color:var(--warm)}
+.ab-cap b{display:block;font-size:17px;margin:6px 0 4px}
+.ab-cap p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.ab-caps .ab-cap:nth-child(2){transition-delay:.08s}.ab-caps .ab-cap:nth-child(3){transition-delay:.16s}
+.hint{display:inline-block;margin-left:8px;font-size:13px;color:var(--warm)}
+.tl{margin-top:8px}
+.tl-bar{display:flex;gap:6px}
+.tl-seg{position:relative;overflow:hidden;text-align:left;cursor:pointer;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px 18px;transition:border-color .3s,background .3s}
+.tl-seg span{display:block;font-size:12px;color:var(--muted)}
+.tl-seg b{display:block;font-size:15px;margin-top:2px}
+.tl-seg .fill{position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--warm);transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.tl-seg.s3 .fill{background:var(--accent)}
+.tl.in .tl-seg .fill{width:100%}
+.tl.in .s2 .fill{transition-delay:.5s}.tl.in .s3 .fill{transition-delay:1s}
+.tl-seg:hover{border-color:var(--warm)}
+.tl-seg[aria-selected="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.tl-seg[aria-selected="true"] b{color:var(--accent)}
+.pulse{position:absolute;top:14px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.pulse::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);animation:pulse 2s ease-out infinite}
+@keyframes pulse{to{transform:scale(3);opacity:0}}
+.tl-axis{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin:8px 2px 0}
+.tl-pan{margin-top:18px;padding:24px 26px;border:1px solid var(--line);border-radius:14px;background:var(--surface);animation:panin .45s ease}
+@keyframes panin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tl-lead{margin:0 0 14px;font-size:16px;font-weight:700;color:var(--accent)}
+.tl-early{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tl-early li{padding:14px 14px 12px;border-top:3px solid var(--warm);background:var(--paper);border-radius:0 0 10px 10px}
+.tl-early span{font-size:11px;color:var(--muted)}
+.tl-early b{display:block;font-size:14px;margin:2px 0 6px}
+.tl-early p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+.tl-one{display:grid;grid-template-columns:240px 1fr;gap:28px}
+.tl-one .mono{font-size:12px;color:var(--muted)}
+.tl-co{display:block;font-size:20px;margin-top:4px}
+.tl-ti{display:block;font-size:14px;color:var(--muted)}
+.tl-chips{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tl-chips li{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+.ab-meta{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.ab-meta .mono{display:block;font-size:11px;color:var(--warm)}
+.ab-meta b{display:block;margin:2px 0 8px}
+.ab-meta p{margin:0;font-size:14px;color:var(--muted)}
+.ab-meta .tl-chips{margin:0}
+@media (max-width:900px){
+  .ab-hero{grid-template-columns:1fr;gap:40px}.ab-photo{max-width:220px}
+  .ab-story,.ab-caps,.ab-meta{grid-template-columns:1fr;gap:16px}
+  .tl-bar{flex-direction:column}.tl-seg{flex:auto!important}.tl-axis{display:none}
+  .tl-early{grid-template-columns:1fr 1fr}.tl-one{grid-template-columns:1fr;gap:12px}
+}
+@media (max-width:560px){.tl-early{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.tl-seg .fill{transition:none}.pulse::after{animation:none}.tl-pan{animation:none}.ab-photo::before,.ab-cap{transition:none}}
+
+/* motion v5 */
+.progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--warm));z-index:50;transition:width .1s linear}
+nav ul a.on{color:var(--accent);font-weight:700}
+nav ul a{position:relative}
+nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .3s ease}
+nav ul a.on::after{transform:scaleX(1)}
+@keyframes fadeup{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero .eyebrow,.hero h1,.hero .lede,.hero .skills li{animation:fadeup .8s cubic-bezier(.2,.7,.2,1) backwards}
+.hero h1{animation-delay:.12s}.hero .lede{animation-delay:.28s}
+.hero .skills li:nth-child(1){animation-delay:.4s}.hero .skills li:nth-child(2){animation-delay:.47s}.hero .skills li:nth-child(3){animation-delay:.54s}
+.hero .skills li:nth-child(4){animation-delay:.61s}.hero .skills li:nth-child(5){animation-delay:.68s}.hero .skills li:nth-child(6){animation-delay:.75s}
+.hero h1 em{background:linear-gradient(transparent 72%,color-mix(in srgb,var(--warm) 30%,transparent) 72%) no-repeat 0 0/0% 100%;animation:mark 1s .9s ease forwards}
+@keyframes mark{to{background-size:100% 100%}}
+.skills li{transition:padding-left .25s ease}
+.skills li:hover{padding-left:8px}
+.skills li:hover b{color:var(--accent)}
+.rvx{opacity:0}
+.rvx.in{opacity:1;animation:fadeup .7s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:var(--d,0s)}
+.vid img,.work .cover img{transition:transform .5s ease}
+.vid:hover img{transform:scale(1.04)}
+.dview:not([hidden]){animation:fadeup .45s ease}
+@media (prefers-reduced-motion:reduce){.hero *,.rvx.in,.dview:not([hidden]){animation:none!important}.rvx{opacity:1}.hero h1 em{background-size:100% 100%}.progress{display:none}}
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+<nav aria-label="頁面導覽">
+  <div class="wrap">
+    <a class="name" href="#top">張慈芬 Claire Chang</a>
+    <ul>
+      <li><a href="#work">工作案例</a></li>
+      <li><a href="#video">影片</a></li>
+      <li><a href="#side">個人作品</a></li>
+      <li><a href="#about">關於我</a></li>
+      <li><a href="#contact">聯絡</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="home">
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow mono">B2B 數位行銷｜作品集 2027</div>
+    <h1>在有限的資源裡，<br><em>把數位通路一條一條建起來。</em></h1>
+    <p class="lede">15 年以上行銷經驗，以數位行銷為主，近 10 年在 B2B 企業。我擅長的是在既有限制下找到可行的做法：從課程電商、轉版課程推廣、私域名單，到 Podcast、影片和 AI 工作流程，多半是從零開始摸索，再一步步做出成果。</p>
+    <ul class="skills" aria-label="核心能力">
+      <li><b>數位通路整合</b><span>官網、FB、LINE、電子報、Podcast</span></li>
+      <li><b>網站規劃與改版</b><span>從零建置或大改版：數位學苑、建準 B2B／B2C 官網</span></li>
+      <li><b>課程電商與導購</b><span>線上課程平台的金流導入、檔期、組合方案、折抵券</span></li>
+      <li><b>文案與內容影片</b><span>B2B、B2C 文案；腳本、拍攝、剪輯、動畫</span></li>
+      <li><b>數據分析與提案</b><span>成效追蹤、客群輪廓、策略提案</span></li>
+      <li><b>AI 工作流程</b><span>簡報、配圖、影片、自建工具</span></li>
+    </ul>
+  </div>
+</header>
+
+
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">01</span><h2>工作案例</h2></div>
+    <p class="intro">每個案例都依「背景 → 我的做法 → 結果」整理。數字是當時情境下的結果，我更想分享的是怎麼判斷、怎麼做。點卡片看完整內容。</p>
+    <div class="cgrid">
+      <a class="ccard feat" href="#case-academy">
+        <span class="cnum">CASE 01｜電商營運</span>
+        <b class="cbig">0 → 營收</b>
+        <span class="cline">2026 年 1–10 月營收已超越前一年全年</span>
+        <h3>SGS 數位學苑：從免費平台到付費課程電商</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard feat" href="#case-iso">
+        <span class="cnum">CASE 02｜整合行銷</span>
+        <b class="cbig">39%</b>
+        <span class="cline">組合學程占營收；同一套打法兩檔課程都驗證</span>
+        <h3>ISO 9001:2026 轉版課程：白皮書預熱 → 精準轉換</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard feat" href="#case-coupon">
+        <span class="cnum">CASE 03｜導購活動</span>
+        <b class="cbig">31.9%</b>
+        <span class="cline">領券後下單率，第一次能追蹤數位業績</span>
+        <h3>$500 折抵券：讓數位推廣的業績看得見</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard" href="#case-line">
+        <span class="cnum">CASE 04｜社群經營</span>
+        <b class="cbig">6.9×</b>
+        <span class="cline">接手後 LINE 好友成長；自有通路帶來五成以上報名</span>
+        <h3>研討會招生與私域名單經營</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard" href="#case-podcast">
+        <span class="cnum">CASE 05｜內容企劃</span>
+        <b class="cbig">16,423</b>
+        <span class="cline">次累積下載；在受規範的通路下，嘗試新的內容形式</span>
+        <h3>SGS Podcast：在既有框架下嘗試新通路</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard" href="#case-ai">
+        <span class="cnum">CASE 06｜AI 應用</span>
+        <b class="cbig">2 天 → 半天</b>
+        <span class="cline">簡報製作時間；配圖從 3 天以上縮短到 1 天內</span>
+        <h3>AI 簡報與內容生產流程</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard" href="#case-ta">
+        <span class="cnum">CASE 07｜數據分析</span>
+        <b class="cbig">37.8%</b>
+        <span class="cline">營收來自企業；另從 484 筆 LINE 私訊找出課程需求</span>
+        <h3>數據分析：客群輪廓與社群私訊需求</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard" href="#case-sunon">
+        <span class="cnum">CASE 08｜品牌經營</span>
+        <b class="cbig">B2B ＋ B2C</b>
+        <span class="cline">一人身兼多職：官網、電商素材、檔期活動到公關</span>
+        <h3>建準（SUNON）：同時經營 B2B 與 B2C</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+      <a class="ccard" href="#case-ads">
+        <span class="cnum">CASE 09｜早期經歷（2009–2015）</span>
+        <b class="cbig">555 → 192</b>
+        <span class="cline">元 FB 名單成本（CPL）：從報表找問題，和代理商一起調整投放、更換素材</span>
+        <h3>從自操廣告到與代理商協作：廣告成效優化</h3>
+        <span class="cgo">看完整案例 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="video" style="border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">02</span><h2>影片作品</h2></div>
+    <p style="max-width:42em;color:var(--muted);margin:-12px 0 28px">我不是專業剪輯師，這些影片從腳本、拍攝、剪輯到動畫，都是在工作中自己摸索完成的。挑了 9 支形式不同的作品：手機即拍即剪的直式短片、Podcast 影音版、專家知識短片、情境說明、課程推廣、2D 動畫、復古遊戲動畫，到 AI 生成影片。</p>
+    <div class="vids">
+      <a class="vid" href="https://www.facebook.com/reel/683187697363907">
+        <div class="thumb"><img src="v-weiya.jpg" alt="2024 SGS 尾牙花絮 影片畫面" loading="lazy"><span class="fmt">直式短影音</span></div>
+        <div class="vb"><h3>2024 SGS 尾牙花絮</h3><p>用手機邊拍邊剪，活動當天就上線的現場紀錄。</p><p class="role">手機拍攝・當場剪輯</p><div class="kpi"><span>FB 播放</span><b>6,075 次</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/SGSCertificationTaiwan/videos/8237378979687425">
+        <div class="thumb"><img src="v-ep08.jpg" alt="Podcast EP08：拿到主導稽核員證書就能當稽核員嗎？ 影片畫面" loading="lazy"><span class="fmt">Podcast 影音版</span></div>
+        <div class="vb"><h3>Podcast EP08：拿到主導稽核員證書就能當稽核員嗎？</h3><p>把 Podcast 對談剪成影音版，帶回節目收聽。</p><p class="role">腳本・拍攝・剪輯</p><div class="kpi"><span>FB 播放</span><b>1,270 次</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/SGSCertificationTaiwan/videos/928109905781568">
+        <div class="thumb"><img src="v-iatf.jpg" alt="SGS 小學堂：三分鐘認識 IATF 六大核心工具 影片畫面" loading="lazy"><span class="fmt">專家知識短片</span></div>
+        <div class="vb"><h3>SGS 小學堂：三分鐘認識 IATF 六大核心工具</h3><p>由汽車產品群經理入鏡講解，把產業標準濃縮成 3 分鐘。</p><p class="role">腳本・拍攝・剪輯</p><div class="kpi"><span>FB 播放</span><b>979 次</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/SGSCertificationTaiwan/videos/363746630128285">
+        <div class="thumb"><img src="v-lab.jpg" alt="您的實驗室是否正面臨這些問題？ 影片畫面" loading="lazy"><span class="fmt">情境說明</span></div>
+        <div class="vb"><h3>您的實驗室是否正面臨這些問題？</h3><p>先點出實驗室的痛點，再帶出驗證服務。</p><p class="role">腳本・拍攝・剪輯</p><div class="kpi"><span>FB 播放</span><b>513 次</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/SGSCertificationTaiwan/videos/2809836212511313">
+        <div class="thumb"><img src="v-academy.jpg" alt="想了解 SGS 管理學院嗎？ 影片畫面" loading="lazy"><span class="fmt">課程推廣</span></div>
+        <div class="vb"><h3>想了解 SGS 管理學院嗎？｜三人同行八八折</h3><p>用上課環境與學員畫面，推廣公開班三人同行優惠。</p><p class="role">腳本・拍攝・剪輯</p><div class="kpi"><span>FB 觀看</span><b>2,085 次</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/SGSCertificationTaiwan/videos/1209316843496456">
+        <div class="thumb"><img src="v-ai.jpg" alt="面對 AI 浪潮，如何確保 AI 系統的安全 影片畫面" loading="lazy"><span class="fmt">2D 動畫</span></div>
+        <div class="vb"><h3>面對 AI 浪潮，如何確保 AI 系統的安全</h3><p>用動畫說明 ISO/IEC 42001 這類抽象主題。</p><p class="role">腳本・動畫製作</p><div class="kpi"><span>製作工具</span><b>Vyond 動畫</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/reel/1133165975052279">
+        <div class="thumb"><img src="v-rpg.jpg" alt="ISO 驗證 = 企業專屬的 RPG 闖關遊戲 影片畫面" loading="lazy"><span class="fmt">復古遊戲動畫</span></div>
+        <div class="vb"><h3>ISO 驗證 = 企業專屬的 RPG 闖關遊戲</h3><p>用復古遊戲風格，把取得驗證的過程比喻成闖關，讓人用有趣的方式認識 ISO。</p><p class="role">腳本・動畫製作</p><div class="kpi"><span>FB 觸及</span><b>954 人</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/SGSCertificationTaiwan/videos/484196964206363">
+        <div class="thumb"><img src="v-22716.jpg" alt="SGS 小學堂：ISO 22716 還是 GMP？ 影片畫面" loading="lazy"><span class="fmt">專家知識短片</span></div>
+        <div class="vb"><h3>SGS 小學堂：ISO 22716 還是 GMP？</h3><p>用 3 分鐘請專家釐清兩個常被搞混的規範。</p><p class="role">腳本・拍攝・剪輯</p><div class="kpi"><span>FB 播放</span><b>699 次</b></div></div>
+      </a>
+      <a class="vid" href="https://www.facebook.com/reel/729737936818709">
+        <div class="thumb"><img src="v-ai-badge.jpg" alt="SGS 數位學苑新功能上線 影片畫面" loading="lazy"><span class="fmt">AI 生成影片</span></div>
+        <div class="vb"><h3>SGS 數位學苑：學習徽章新功能上線</h3><p>用 AI 生成畫面，為平台新功能做一支有科技感的上線預告。</p><p class="role">腳本・AI 生成・剪輯</p><div class="kpi"><span>製作方式</span><b>AI 生成畫面</b></div></div>
+      </a>
+    </div>
+    <p class="note">播放與觸及數取自 SGS 粉專的貼文成效分析表。</p>
+  </div>
+</section>
+
+<section id="side">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">03</span><h2>個人作品</h2></div>
+    <p style="max-width:40em;color:var(--muted);margin:-12px 0 28px">工作之外，我用 AI 把生活裡的小問題做成工具和影片。這些作品都已上線，可以直接點開使用。</p>
+    <div class="works">
+      <article class="work">
+        <div class="cover pic"><img src="w-ep01.jpg" alt="《竟然是真的》EP01 影片封面" loading="lazy"><span class="kind">AI 影片｜YouTube</span></div>
+        <div class="work-body">
+          <h3>《竟然是真的》EP01：1919 波士頓糖蜜洪災</h3>
+          <p>以前做一支有故事性的影片，從資料、畫面到剪輯都要花很多時間。我用 AI 練習在短時間內完成：整理史料、用 AI 重現當時情境，再搭配剪輯與旁白。</p>
+          <p><b>2026/10/28 發布</b>，一個人在短時間內完成整支影片，也開啟了《竟然是真的》系列。</p>
+          <a class="go" href="https://youtu.be/bKzYt6c_HNI">觀看影片 →</a>
+        </div>
+      </article>
+      <article class="work">
+        <div class="cover pic"><img src="w-prompt.jpg" alt="Claire Prompt Vault 管理介面" loading="lazy"><span class="kind">網頁工具｜Prompt 管理</span></div>
+        <div class="work-body">
+          <h3>Claire Prompt Vault</h3>
+          <p>同時在 ChatGPT、Claude、Gemini 工作，好用的 Prompt 和流程容易散落各處。我自建一個 Prompt 管理工具，把跨平台的 AI 工作流程和靈感集中在一起。</p>
+          <p><b>已上線並實際用在日常工作</b>，把個人的 AI 經驗變成可以重複使用的系統。</p>
+          <a class="go" href="https://prompt-manager.claire30212.workers.dev/">打開工具 →</a>
+        </div>
+      </article>
+      <article class="work">
+        <div class="cover pic"><img src="w-points.jpg" alt="集！點！LA！登入頁與孩子的積分畫面" loading="lazy"><span class="kind">網頁 App｜親子任務積分</span></div>
+        <div class="work-body">
+          <h3>集！點！LA！親子積分系統</h3>
+          <p>紙本集點卡浪費紙，點數也很難累積、帶著走。我做了一個結合任務與動物養成的線上集點卡：家長自訂任務，有扣分與兌換獎勵機制，孩子完成任務就能讓電子寵物長大。</p>
+          <p><b>集點變得更方便、更有趣</b>，孩子可以自己打分數、了解自己的狀況。任務、扣分、兌換的設計，和會員積分經營是同一套邏輯。</p>
+          <a class="go" href="https://claire30212.github.io/kids-points/">打開 App →</a>
+        </div>
+      </article>
+      <article class="work">
+        <div class="cover pic"><img src="w-ecard.jpg" alt="手作電子卡片的卡片管理頁" loading="lazy"><span class="kind">網頁 App｜多人電子賀卡</span></div>
+        <div class="work-body">
+          <h3>手作電子卡片</h3>
+          <p>大卡片要傳給很多人寫，常受時間和地點限制；線上卡片很快，卻少了手寫的溫度。我做了可以多人留言、拍照拼貼的線上卡片，再加上布置飾品與排版功能。</p>
+          <p><b>實際寄給多位朋友使用</b>，有朋友主動建議可以上線販售。</p>
+          <a class="go" href="https://claire30212.github.io/ecard/">打開卡片 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">04</span><h2>關於我</h2></div>
+
+    <div class="ab-hero rv">
+      <figure class="ab-photo"><img src="claire.jpg" alt="張慈芬 Claire Chang 的大頭照" width="640" height="800"></figure>
+      <div class="ab-intro">
+        <p class="ab-eyebrow mono">ABOUT · CLAIRE CHANG</p>
+        <h3 class="ab-name">張慈芬 <span>Claire</span></h3>
+        <p class="ab-role">B2B 數位行銷｜15 年以上行銷經驗</p>
+        <p class="ab-quote">「把一件事從無到有做起來，<br>並看到它帶來實際成果。」</p>
+        <dl class="ab-nums">
+          <div><dt><b data-count="15">15</b><i>+</i></dt><dd>年行銷經驗</dd></div>
+          <div><dt><b data-count="6">6</b><i>年</i></dt><dd>建準：B2B ＋ B2C</dd></div>
+          <div><dt><b data-count="4">4</b><i>年多</i></dt><dd>SGS：整合數位通路</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="ab-story rv">
+      <p>我的職涯從廣告代理商開始，親手操作過 100 多家客戶的 Google 廣告與 SEO，也在遊戲公司自操 FB 與 Google 廣告；之後轉到品牌端，負責和媒體代理商、SEO/GEO 廠商合作。因為自己做過，我能站在品牌方提出更好的方向，也看得懂代理商回饋的成效數據、快速配合調整，而不是被帶著走。品牌端的經驗，則讓我習慣從業績回推行銷該做什麼。</p>
+      <p>最有成就感的時刻，都是把一件事從無到有做起來：把免費學習平台變成付費課程電商、從零開一個 Podcast 頻道、把展覽現場的人潮變成可以重複觸及的名單。工作之外，我用 AI 做影片、寫自己的網頁工具，這些習慣也直接帶回工作上，縮短了簡報與內容製作的時間。</p>
+    </div>
+
+    <div class="ab-caps">
+      <div class="ab-cap rv"><span class="mono">01</span><b>數位營收經營</b><p>電商功能導入、檔期活動、優惠券導購</p></div>
+      <div class="ab-cap rv"><span class="mono">02</span><b>自有通路經營</b><p>FB、LINE、電子報、Podcast，把活動人潮轉成私域名單</p></div>
+      <div class="ab-cap rv"><span class="mono">03</span><b>AI 應用</b><p>簡報與內容生產流程、AI 影片、自建網頁工具</p></div>
+    </div>
+
+    <h3 class="sub-h">職涯歷程</h3>
+    <p class="intro">前 6 年在 4 家公司打下數位行銷的實操底子，之後分別在建準和 SGS 待了 6 年與 4 年多，把這些能力整合起來，用在品牌經營和數位通路上。<span class="hint">點選下方階段看細節</span></p>
+
+    <div class="tl rv">
+      <div class="tl-bar" role="tablist" aria-label="職涯階段">
+        <button class="tl-seg s1" role="tab" id="tab-s1" aria-controls="pan-s1" aria-selected="false" style="flex:6"><span class="mono">2009–2015</span><b>數位行銷基礎期</b><i class="fill"></i></button>
+        <button class="tl-seg s2" role="tab" id="tab-s2" aria-controls="pan-s2" aria-selected="false" style="flex:6.3"><span class="mono">2015–2021</span><b>建準｜6 年</b><i class="fill"></i></button>
+        <button class="tl-seg s3" role="tab" id="tab-s3" aria-controls="pan-s3" aria-selected="true" style="flex:4.5"><span class="mono">2022–至今</span><b>SGS｜4 年多</b><i class="fill"></i><em class="pulse" aria-hidden="true"></em></button>
+      </div>
+      <div class="tl-axis mono" aria-hidden="true"><span>2009</span><span>2015</span><span>2022</span><span>NOW</span></div>
+
+      <div class="tl-pan" role="tabpanel" id="pan-s1" aria-labelledby="tab-s1" hidden>
+        <p class="tl-lead">4 家公司，從實操累積完整的數位行銷底子</p>
+        <ul class="tl-early">
+          <li><span class="mono">2009–2011</span><b>亞普達國際電子商務</b><p>Google 廣告與 SEO 實操，操作 100 多家客戶帳戶</p></li>
+          <li><span class="mono">2012–2013</span><b>智冠科技</b><p>自操 FB 與 Google 廣告，開始規劃整體活動；粉絲團一年 0 → 35,000</p></li>
+          <li><span class="mono">2014</span><b>微星科技（MSI）</b><p>通路行銷企劃：支援美國、澳洲、東南亞與台灣子公司的行銷與展覽（Computex 等），英文工作環境</p></li>
+          <li><span class="mono">2014–2015</span><b>學承電腦</b><p>和多家媒體代理商溝通，思考廣告創意與成效；FB 名單成本 555 → 192 元</p></li>
+        </ul>
+      </div>
+      <div class="tl-pan" role="tabpanel" id="pan-s2" aria-labelledby="tab-s2" hidden>
+        <div class="tl-one">
+          <div><span class="mono">2015/09 – 2021/12</span><b class="tl-co">建準電機（SUNON）</b><span class="tl-ti">行銷企劃與公關</span></div>
+          <div><p class="tl-lead">一人身兼多職，同時經營 B2B 與 B2C 兩個市場</p>
+          <ul class="tl-chips"><li>4 個官網</li><li>B2B 與 B2C 文案</li><li>新產品上市</li><li>台灣精品獎、iF</li><li>3 個粉絲團合計 80,000</li></ul>
+          <a class="go" href="#case-sunon">看建準案例 →</a></div>
+        </div>
+      </div>
+      <div class="tl-pan" role="tabpanel" id="pan-s3" aria-labelledby="tab-s3">
+        <div class="tl-one">
+          <div><span class="mono">2022/06 – 至今</span><b class="tl-co">SGS 台灣檢驗科技</b><span class="tl-ti">資深行銷企劃</span></div>
+          <div><p class="tl-lead">整合數位通路，讓行銷看得見業績</p>
+          <ul class="tl-chips"><li>數位學苑營收從 0 建立</li><li>轉版課程整合行銷</li><li>LINE 好友 6.9 倍</li><li>Podcast 與影片</li><li>AI 簡報流程</li></ul>
+          <a class="go" href="#work">看 SGS 案例 →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-meta rv">
+      <div><span class="mono">EDUCATION</span><b>學歷</b><p>國立高雄第一科技大學 國際管理系 碩士（IMBA）<br>義守大學 應用英語系 學士</p></div>
+      <div><span class="mono">CERTIFICATES</span><b>證照</b><ul class="tl-chips"><li>Google Analytics 4 認證</li><li>Google 數位人才結業證書</li><li>TOEIC 705</li></ul></div>
+      <div><span class="mono">INTERESTS</span><b>興趣</b><ul class="tl-chips"><li>AI 網頁與工具開發</li><li>AI 影片創作</li><li>品牌視覺設計</li></ul></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>想聊聊這些案例背後的細節？</h2>
+    <p>完整的營收數字與執行細節，歡迎在面試時當面說明。</p>
+    <div class="addr" id="mail">claire30212@gmail.com</div> <button class="copy" id="copy" type="button">複製 Email</button><span class="copied" id="copied" role="status"></span>
+  </div>
+</section>
+
+</div>
+
+<main id="case-view" hidden>
+  <div class="wrap">
+    <a class="back" href="#work">← 回到作品集總覽</a>
+<div class="dview" id="d-case-academy" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 01</span><h3>SGS 數位學苑：從免費平台到付費課程電商</h3></div>
+      <div class="case-meta"><span>期間 <b>2025/06 – 進行中</b></span><span>我的角色 <b>提案補上電商功能、與系統廠商溝通至上線、負責推廣</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>平台原本只是學員的免費課前進修網站，營收為 0，沒有任何電商機制；線上課程數量少，也缺少能吸引人購買的主題。</p></div>
+        <div><span class="label">我的做法</span><p>健檢平台後提案補上電商功能，並和 SEO 廠商合作優化網站內容，讓課程更容易被搜尋到；分析學員需求，建議可以開發的課程主題；規劃漲價前預告、課程組合、全站優惠等檔期，再配合 ISO 改版推出低門檻的回放影片引流。</p></div>
+        <div class="res"><span class="label">結果</span><p>營收從 0 開始建立，2026 年 1–10 月營收已超越前一年全年；17 個月的累計營收中，漲價前預告這一檔（2 個月）就占了約兩成。</p></div>
+      </div>
+      <div class="case-body">
+        <figure class="tall"><img src="academy-fb.jpg" alt="SGS 數位學苑 ISO 條文課程限時優惠的 Facebook 貼文" loading="lazy" width="591" height="797"><figcaption>檔期推廣貼文（2025/06）：ISO 條文課程最後優惠價，貼文獲 461 個心情、39 次分享。</figcaption></figure>
+        <div>
+          <div class="prs" style="grid-template-columns:1fr">
+            <div><span class="label">背後的思考</span><p>B2B 學員買課常卡在三件事，每個做法各解一個：</p>
+              <ul class="think"><li><b>不急著決定</b>：漲價前預告給出明確期限，讓「之後再說」變成「現在就買」</li><li><b>不確定值不值得</b>：先用低價回放影片試看，再往完整課程走</li><li><b>找不到、選不到</b>：SEO 讓課程被找到，學員需求分析讓課程主題對得上</li></ul></div>
+          </div>
+          <div class="tags"><span class="tag">電商營運</span><span class="tag">導購活動</span><span class="tag">檔期企劃</span></div>
+        </div>
+      </div>
+    </article>
+</div>
+<div class="dview" id="d-case-iso" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 02</span><h3>ISO 9001:2026 轉版課程：白皮書預熱 → 課程精準轉換</h3></div>
+      <div class="case-meta"><span>期間 <b>2026/09/14 – 2026/10/31</b></span><span>我的角色 <b>規劃整檔轉版課程的推廣策略、誘因設計與成效追蹤</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>ISO 改版是一次性的需求高峰。既有的電子報名單很廣，不一定是真正需要轉版的人；過去推課也多半只靠單純打折。</p></div>
+        <div><span class="label">我的做法</span><p>先用白皮書下載收集真正關心這次改版的精準名單，課程上架後再把推廣推送給這群人；首次加入 O2O 複合誘因，推出 9001＋14001 組合學程拉高客單價，再用低價研討會回放補名單。</p></div>
+        <div class="res"><span class="label">結果</span><p>白皮書收集 894 筆名單，65% 是新客；上架 7 週共 130 筆訂單，組合學程占 39% 營收，客單價比單課高約 5 成；研討會回放另售出 65 筆。</p></div>
+      </div>
+      <div class="incent">
+        <div><b>限時優惠</b>全系列課程限時 6 折起，延續早鳥價格優勢</div>
+        <div><b>O2O 複合方案</b>買線上課程送 NT$1,000 實體課程折價券，把線上學員導到線下</div>
+        <div><b>獨家贈品</b>加贈講師精華簡報，提高課程附加價值</div>
+      </div>
+      <div class="case-body">
+        <figure class="chart" id="chart-iso"></figure>
+        <figure class="chart">
+          <h4>同一套打法，在兩檔轉版課程都驗證</h4>
+          <p class="sub">白皮書預熱期成效比較</p>
+          <div class="cmp">
+            <div class="h"></div><div class="h">ISO 14001:2026</div><div class="h">ISO 9001:2026</div>
+            <div>白皮書名單</div><div><b>1,214</b> 筆</div><div><b>894</b> 筆</div>
+            <div>每筆名單成本</div><div><b>13.7</b> 元</div><div><b>18.1</b> 元</div>
+            <div>新客比例</div><div><b>63%</b></div><div><b>65%</b></div>
+          </div>
+          <p class="note">從 14001 的每週數據發現，49% 訂單集中在早鳥截止前 3 週，因此提出 9001 在截止前加碼倒數、並規劃截止後承接檔期的建議。</p>
+        </figure>
+      </div>
+      <div class="tags"><span class="tag">名單型廣告</span><span class="tag">轉換漏斗</span><span class="tag">O2O</span><span class="tag">組合定價</span><span class="tag">成效分析</span></div>
+    </article>
+</div>
+<div class="dview" id="d-case-coupon" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 03</span><h3>管理學院 $500 折抵券：讓數位推廣的業績看得見</h3></div>
+      <div class="case-meta"><span>期間 <b>2026/04 – 2026/10</b></span><span>我的角色 <b>提案、說服管理學院主管、與廠商溝通建置、領券頁企劃與跨部門推廣</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>網站無法埋設追蹤碼，數位推廣帶來的業績沒辦法證明；單人報名也缺少優惠誘因。</p></div>
+        <div><span class="label">我的做法</span><p>提案「數位通路專屬」折抵券：每張券都有獨立代碼，用券就等於標記了「這筆訂單來自數位通路」。</p></div>
+        <div class="res"><span class="label">結果</span><p>發券 740 張，帶來 236 筆折抵券訂單，領券後下單率 31.9%；第一次讓數位推廣的業績可以被追蹤。</p></div>
+      </div>
+      <div class="case-body single">
+        <figure><img src="coupon-landing.jpg" alt="SGS Academy 數位通路專屬活動領券頁，輸入專屬代碼現折 500 元" loading="lazy" width="1143" height="618"><figcaption>領券活動頁主視覺：單人報名也能現折 $500，全年無限次領取。<a href="https://feversocial.com/46064/38786">看活動頁</a></figcaption></figure>
+      </div>
+      <div class="tags"><span class="tag">導購活動</span><span class="tag">成效追蹤</span><span class="tag">跨部門溝通</span></div>
+    </article>
+</div>
+<div class="dview" id="d-case-line" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 04</span><h3>研討會招生與私域名單經營</h3></div>
+      <div class="case-meta"><span>期間 <b>FB 2022/07、LINE 2023/03 接手 – 進行中</b></span><span>我的角色 <b>經營 FB、LINE、電子報；設計研討會與展覽的加好友活動</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>FB 接手前 5 個月追蹤數幾乎沒有成長（約 +100 人）；接手 LINE 時好友約 2,500 人，帶來的研討會報名約占 7%。</p></div>
+        <div><span class="label">我的做法</span><p>在研討會與展覽現場設計加好友活動，把一次性的活動人潮轉成可重複觸及的名單；再用 FB、LINE、電子報規劃招生內容與發送節奏。</p></div>
+        <div class="res"><span class="label">結果</span><p>LINE 好友成長約 6.9 倍，帶來的報名占比 7% → 11%；FB 追蹤成長約 3.5 倍。2026 年 5 場研討會共 2,433 筆報名，超過五成（約 56%）來自電子報、LINE、FB。</p></div>
+      </div>
+      <div class="case-body">
+        <figure class="chart" id="chart-line"></figure>
+        <figure class="chart" id="chart-fb"></figure>
+      </div>
+      <div class="photos3">
+        <figure><img src="line-poster.jpg" alt="SGS 管理學院 LINE 好友大募集海報，掃描 QR code 加入好友" loading="lazy" width="653" height="924"><figcaption>活動現場使用的「好友大募集」海報。</figcaption></figure>
+        <figure><img src="event-booth.jpg" alt="臺灣資安大會 SGS 攤位，參觀者排隊參加拉霸機加好友活動" loading="lazy" width="565" height="718"><figcaption>臺灣資安大會攤位：「資安防禦拉霸連線」加好友活動，參觀者排隊掃碼參加（已模糊其他參加者臉部）。</figcaption></figure>
+        <figure><img class="pos-r" src="event-desk.jpg" alt="研討會報到處設置 LINE 好友大募集立牌" loading="lazy" width="511" height="512"><figcaption>研討會報到處：設置「好友大募集」立牌，報到時順手加入 LINE 好友（已模糊其他參加者臉部）。</figcaption></figure>
+      </div>
+      <div class="case-body single">
+        <div>
+          <div class="prs" style="grid-template-columns:1fr">
+            <div><span class="label">加好友活動怎麼設計</span>
+              <p>每場活動依現場人流挑選互動形式，掃碼加好友就能參加。2024/03 起有紀錄的 15 場活動，共新增至少 9,000 位 LINE 好友；單場最多的是 2025 臺灣資安大會，新增 2,407 位。</p>
+              <div class="mechanics"><span>刮刮樂</span><span>拉霸機</span><span>大轉盤</span><span>戳戳樂</span><span>心理測驗</span><span>翻牌遊戲</span><span>學習需求問卷</span></div>
+            </div>
+            <div><span class="label">報名來源（2026 年 5 場，依報名問卷統計）</span>
+              <p>電子報 41.5%、LINE 11.2%、FB 3.6%；電子報是最大的單一報名來源，比業務邀請（20.6%）多一倍。</p>
+            </div>
+          </div>
+          <div class="tags"><span class="tag">社群經營</span><span class="tag">電子報</span><span class="tag">遊戲化活動</span><span class="tag">O2O 名單收集</span></div>
+        </div>
+      </div>
+    </article>
+</div>
+<div class="dview" id="d-case-podcast" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 05</span><h3>SGS Podcast：在既有框架下嘗試新通路</h3></div>
+      <div class="case-meta"><span>期間 <b>2023/06 – 進行中</b></span><span>我的角色 <b>頻道建置、主題企劃、腳本、主持、錄製與推廣</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>公司的數位通路受總部規範，我想在這個框架下，找到適合檢驗驗證產業的新做法，於是嘗試當時正在興起的 Podcast。節目主題由各產品線決定，很多是我不熟悉的專業領域。</p></div>
+        <div><span class="label">我的做法</span><p>從頻道建置開始，針對每一集的主題先消化專業內容，再企劃題綱、寫腳本，並擔任主持、錄製與推廣；題目從 ISO 驗證、ESG 到 AI 治理。</p></div>
+        <div class="res"><span class="label">結果</span><p>節目《經「驗」，談什麼？》上架 12 集，累積下載 16,423 次、不重複下載 9,357 次。</p></div>
+      </div>
+      <div class="case-body single">
+        <figure><img src="podcast-apple.jpg" alt="Apple Podcasts 上的《經「驗」，談什麼？》節目頁" loading="lazy" width="920" height="290"><figcaption>Apple Podcasts 節目頁。<a href="https://podcasts.apple.com/us/podcast/%E7%B6%93-%E9%A9%97-%E8%AB%87%E4%BB%80%E9%BA%BC/id1697073416">收聽節目</a></figcaption></figure>
+      </div>
+      <div class="prs" style="grid-template-columns:1fr;margin-top:16px"><div><span class="label">回頭看</span><p>這不是完美的作品，主持和節奏都還有很多可以進步的地方。但這是一次從零開始的嘗試，讓我學會快速消化陌生的專業主題，再轉成一般人聽得懂的內容。</p></div></div>
+      <div class="tags"><span class="tag">Podcast</span><span class="tag">內容企劃</span><span class="tag">主持</span></div>
+    </article>
+</div>
+<div class="dview" id="d-case-ai" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 06</span><h3>AI 簡報與內容生產流程</h3></div>
+      <div class="case-meta"><span>我的角色 <b>建立流程</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>簡報製作耗時；社群配圖要排隊等設計資源，常常 3 天到 1 週。</p></div>
+        <div><span class="label">我的做法</span><p>以公司簡報模板為基底建立 AI 簡報生成流程；另外建立 AI 貼文與配圖流程。</p></div>
+        <div class="res"><span class="label">結果</span><p>簡報從約 2 天縮短到約半天；配圖縮短到 1 天內完成。</p></div>
+      </div>
+      <div class="case-body single">
+        <div class="photos3">
+          <figure><img src="ai-comic.jpg" alt="年末感謝祭 75 折四格漫畫貼文" loading="lazy"><figcaption>AI 生成四格漫畫：年末感謝祭全站 75 折。</figcaption></figure>
+          <figure><img src="ai-standards.jpg" alt="世界標準日貼文：到底哪個才是最新版" loading="lazy"><figcaption>世界標準日：用「最終版_真的最終版」的檔名梗講標準。</figcaption></figure>
+          <figure><img src="ai-webinar.jpg" alt="ISO 22002-X 研討會限時免費觀看貼文" loading="lazy"><figcaption>ISO 22002-X 研討會回放：會員限定免費觀看。</figcaption></figure>
+        </div>
+        <p class="note">這些社群素材都用 AI 配圖流程製作。</p>
+        <div class="case-body" style="margin-top:4px">
+          <figure><img src="deck-ta.jpg" alt="用 AI 簡報流程製作的 TA 輪廓分析簡報縮圖（已模糊細節）" loading="lazy"><figcaption>用 AI 簡報流程完成：數位學苑 TA 輪廓分析（9 頁）。細節已模糊處理。</figcaption></figure>
+          <figure><img src="deck-b2b.jpg" alt="用 AI 簡報流程製作的 B2B 發展提案簡報縮圖（已模糊細節）" loading="lazy"><figcaption>用 AI 簡報流程完成：B2B 發展提案（12 頁）。細節已模糊處理。</figcaption></figure>
+        </div>
+        <figure class="ba" aria-label="製作時間前後比較">
+          <div class="ba-row"><span>簡報</span><div class="bars"><div class="bar before" style="width:100%">原本 約 2 天</div><div class="bar after" style="width:25%;min-width:7.5em">現在 約半天</div></div></div>
+          <div class="ba-row"><span>社群配圖</span><div class="bars"><div class="bar before" style="width:100%">原本 3 天 – 1 週</div><div class="bar after" style="width:14%;min-width:7.5em">現在 1 天內</div></div></div>
+        </figure>
+      </div>
+      <div class="tags"><span class="tag">AI 應用</span><span class="tag">流程改善</span></div>
+    </article>
+</div>
+<div class="dview" id="d-case-sunon" hidden>
+<article class="case">
+      <div class="case-top"><span class="case-num">CASE 08</span><h3>建準電機（SUNON）：同時經營 B2B 與 B2C 兩個市場</h3></div>
+      <div class="case-meta"><span>期間 <b>2015/09 – 2021/12</b></span><span>我的角色 <b>行銷企劃與公關：官網規劃、電商素材、檔期活動、FB 廣告、獎項申請、媒體與參訪接待</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>一人同時負責兩條產品線：B2B 的散熱風扇，以及面對消費者的居家換氣扇、吊扇。兩個市場的溝通對象和通路完全不同。</p></div>
+        <div><span class="label">我的做法</span><p>規劃 B2B 與 B2C 官網及子網站（含 2 個國家、2 種語系）；規劃 B2C 商品頁內容與素材，提供經銷商在 momo、PChome、Yahoo 購物等通路上架；再搭配團購、預購檔期與 FB 廣告推廣。</p></div>
+        <div class="res"><span class="label">結果</span><p>新風機上市預購累積 58 位訂購者、75 台；換氣扇團購售出 113 台；3 個粉絲團合計 80,000 人；協助產品獲得台灣精品獎、iF 設計獎。</p></div>
+      </div>
+      <div class="case-body">
+        <figure><img src="sunon-web.jpg" alt="SUNON B2B 官網、B2C 官網、TUMA 官網與 mogear 官網畫面" loading="lazy"><figcaption>官網規劃：SUNON B2B 與 B2C 官網、TUMA 官網（2 個國家）、mogear 官網（2 種語系）。</figcaption></figure>
+        <figure><img src="sunon-ecom.jpg" alt="SUNON 吊扇、新風機、換氣扇的電商商品頁文案與設計" loading="lazy"><figcaption>電商商品頁：規劃內容與文案，和設計溝通，再提供經銷商上架 momo、PChome、Yahoo 購物等通路。</figcaption></figure>
+      </div>
+            <div class="sub-case">
+        <h4>代表專案｜綠境風雙流新風機上市（2019）</h4>
+        <p class="sub-lead">為台灣市場還很陌生的新產品「雙流新風機」規劃上市預購活動。目標族群是 31–40 歲、家中有小孩的家庭。</p>
+        <div class="mini-stats">
+          <div><b>1,246 萬</b><span>Google＋FB 廣告曝光</span></div>
+          <div><b>53 萬</b><span>FB 觸及人數</span></div>
+          <div><b>123 筆</b><span>粉絲私訊、來電與詢問信</span></div>
+          <div><b>75 台</b><span>58 位預購訂購</span></div>
+        </div>
+        <figure><img src="sunon-launch.jpg" alt="綠境風雙流新風機上市的 FB 實測影片、產品貼文與早鳥優惠貼文" loading="lazy"><figcaption>推廣素材：實測對比影片、產品特色貼文、早鳥預購優惠貼文；另搭配 Google 多媒體與再行銷廣告。</figcaption></figure>
+        <div class="prs" style="grid-template-columns:1fr;margin-top:12px"><div><span class="label">活動後的檢討</span>
+          <ul class="think">
+            <li><b>一半訂單集中在最後 10 天</b>：大家會觀望到截止前才決定，之後可以縮短活動期，增加決策的急迫感</li>
+            <li><b>經銷商回饋多數人卡在要鑽牆</b>：文宣要先說清楚安裝限制、篩掉無法安裝的客群，也回饋給產品設計思考其他安裝方式</li>
+            <li><b>訂購者集中在雙北</b>：北部重視除濕，可以作為產品功能整合的方向</li>
+          </ul></div></div>
+        <p class="note">七年後在 SGS 推 ISO 14001 轉版課程，也看到同樣的現象：49% 訂單集中在早鳥截止前 3 週。觀察買氣節奏、再調整活動設計，是我一直保留的習慣。</p>
+      </div>
+      <div class="case-body single"><figure><img src="sunon-catalog.jpg" alt="SUNON 居家換氣扇、新風機、吊扇產品型錄" loading="lazy"><figcaption>產品型錄：負責內容規劃、文案撰寫與設計溝通。</figcaption></figure></div>
+      <p class="note">公關方面，負責商業週刊、遠見等媒體專題採訪的訪綱溝通與行程安排，以及企業參訪接待與活動司儀。</p>
+      <div class="tags"><span class="tag">B2B＋B2C 雙市場</span><span class="tag">官網規劃</span><span class="tag">電商素材</span><span class="tag">FB 廣告</span><span class="tag">公關</span></div>
+    </article>
+</div>
+<div class="dview" id="d-case-ta" hidden>
+    <article class="case">
+      <div class="case-top"><span class="case-num">CASE 07</span><h3>數據分析：客群輪廓與社群私訊需求</h3></div>
+      <div class="case-meta"><span>期間 <b>2025 – 2026</b></span><span>我的角色 <b>資料整合、分析、提出建議</b></span></div>
+      <p class="intro" style="margin-top:0">報表只是起點。這裡放兩個分析，都是先從數據看出問題或機會，再轉成具體的下一步。</p>
+      <div class="an-jump">
+        <a href="#an-1"><span class="mono">分析 01</span><b>數位學苑客群輪廓 → 發現 B2B 商機</b></a>
+        <a href="#an-2"><span class="mono">分析 02</span><b>社群私訊需求 → 開課建議與自動回覆</b></a>
+      </div>
+      <section class="an" id="an-1">
+        <div class="an-head"><span class="an-no">01</span><div><h4>數位學苑客群輪廓分析：發現 B2B 商機</h4><p>2026/09 – 2026/11｜資料整合、分析與提案報告</p></div></div>
+        <div class="prs">
+        <div><span class="label">分析什麼</span><p>數位學苑營收開始成長後，要決定該開什麼課、往哪個客群擴大。這些判斷需要先知道「到底是誰在買」。</p></div>
+        <div><span class="label">我的做法</span><p>整合網站會員與購買紀錄、GA 訪客數據，再加上 LINE POINT 問卷與電子報偏好調查，交叉比對出客群輪廓，提出開課方向建議；再進一步提出依購買數分群、「業務主導、行銷支援」的企業方案。</p></div>
+        <div class="res"><span class="label">結果</span><p>發現全站約 37.8% 營收來自企業，但 9 成企業只有 1 個人在買：企業客戶已經在，只是還沒被當成企業來經營。B2B 發展提案已由主管往上呈報，目前進行中。</p></div>
+      </div>
+      <div class="case-body">
+        <figure><img src="deck-ta.jpg" alt="SGS 數位學苑 TA 輪廓分析簡報縮圖（已模糊細節）" loading="lazy"><figcaption>TA 輪廓分析簡報（2026/09）：客群輪廓、購買行為、課程偏好與開課建議。細節已模糊處理。</figcaption></figure>
+        <figure><img src="deck-b2b.jpg" alt="數位學苑 B2B 發展提案簡報縮圖（已模糊細節）" loading="lazy"><figcaption>B2B 發展提案（2026/11）：客群分群、業務與行銷分工、試行規劃。細節已模糊處理。</figcaption></figure>
+      </div>
+      
+      </section>
+      <section class="an" id="an-2">
+        <div class="an-head"><span class="an-no">02</span><div><h4>社群年度結案分析：從私訊找出課程需求</h4><p>2025 年度｜年度結案分析、需求整理與建議、LINE 自動回覆規劃</p></div></div>
+        <div class="mini-stats">
+        <div><b>40 則</b><span>電子報</span></div>
+        <div><b>122 則</b><span>FB 貼文</span></div>
+        <div><b>484 筆</b><span>LINE 私訊詢問</span></div>
+        <div><b>45 筆</b><span>FB 私訊詢問</span></div>
+      </div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>每年底我會替電子報、FB、LINE、Podcast 做結案分析。除了貼文與開信成效，社群私訊其實藏著學員最直接的需求，但平常回完就結束，沒有被整理。</p></div>
+        <div><span class="label">我的做法</span><p>把一整年的私訊逐筆分類：問的是哪門課、公開班或企業包班、哪個地區，再從中整理出三種需求：常有人問但還沒開的課、常滿班報不到名的課、希望開假日班的課。</p></div>
+        <div class="res"><span class="label">結果</span><p>把三份需求清單整理給管理學院，作為開新課、加開班次、增設假日班或做成數位學苑線上課程的參考；常被重複問的問題改用 LINE 自動回覆，減少人工重複回覆。</p></div>
+      </div>
+      <div class="case-body">
+        <figure><img src="deck-inquiry.jpg" alt="社群年終報告中的 LINE 詢問分類與三項開課建議" loading="lazy"><figcaption>2025 社群年終報告節錄：LINE 詢問分類，以及「未開此課程」「滿班無法報名」「假日班需求」三項建議。</figcaption></figure>
+        <figure><img src="line-faq.jpg" alt="SGS 管理學院 LINE 官方帳號的常見問題選單與自動回覆畫面" loading="lazy"><figcaption>LINE 常見問題自動回覆：學員點選「常見問題」，就能看到驗證、企業包班、公開班的差別，以及開班與滿班等說明。</figcaption></figure>
+      </div>
+      
+      </section>
+      <div class="tags"><span class="tag">數據分析</span><span class="tag">客群輪廓</span><span class="tag">需求洞察</span><span class="tag">策略提案</span><span class="tag">跨部門協作</span></div>
+    </article>
+</div>
+<div class="dview" id="d-case-ads" hidden>
+    <article class="case">
+      <div class="case-top"><span class="case-num">CASE 09</span><h3>從自操廣告到與代理商協作：廣告成效優化（2009–2015）</h3></div>
+      <div class="case-meta"><span>期間 <b>2009 – 2015</b></span><span>公司 <b>亞普達、智冠、學承</b></span><span>我的角色 <b>自操廣告 → 與代理商協作</b></span></div>
+      <div class="prs">
+        <div><span class="label">背景</span><p>職涯前 6 年，我從代理商的廣告操作手開始，到遊戲公司自操廣告，再到教育訓練公司負責和媒體代理商合作。角色從自己操作，轉為和代理商合作。</p></div>
+        <div><span class="label">我的做法</span><ul class="think" style="padding-left:16px;margin:0">
+          <li><b>代理商時期</b>：替客戶操作 Google 廣告，依裝置、版位拆開比較成效，再調整出價與預算。</li>
+          <li><b>遊戲公司</b>：同時製作多組廣告素材與活動頁，每天觀察成效；跑一段時間成效不好的就換掉，好的提高預算。</li>
+          <li><b>教育訓練公司</b>：每月從報表追蹤名單成本與 ROI，找出問題後向代理商提出調整建議，一起優化投放並更換廣告素材。</li></ul></div>
+        <div class="res"><span class="label">結果</span><p>XX 銀行手機廣告的平均點擊成本比電腦裝置低 6.6 元、點擊數是 3.7 倍；新遊戲上線一週帶進約 40,000 平台註冊；FB 名單成本（CPL）從 555 元降到 192 元、Yahoo 從 1,398 元降到 1,050 元。</p></div>
+      </div>
+      <div class="case-body">
+        <figure><img src="ads-bank.jpg" alt="XX 銀行行動廣告的點閱率、平均點擊成本趨勢與廣告活動報表（客戶名稱已模糊）" loading="lazy"><figcaption>代理商時期｜XX 銀行行動 App 廣告（2011）：把手機版位獨立出來比較，iPhone 與 Android 的點擊成本明顯低於其他版位。客戶名稱已模糊處理。</figcaption></figure>
+        <figure><img src="ads-game.jpg" alt="遊戲廣告在 FB 與 Google 的費用與轉換、各遊戲上線活動的進入遊戲與平台註冊數" loading="lazy"><figcaption>遊戲公司｜FB 與 Google 廣告的費用與轉換，以及各款遊戲上線活動帶來的進入遊戲與平台註冊數。</figcaption></figure>
+      </div>
+      <div class="case-body single"><figure><img src="ads-edu.jpg" alt="教育訓練公司 Yahoo 與 Facebook 每月 CPL 與 ROI 報表及趨勢圖（細節已模糊）" loading="lazy"><figcaption>教育訓練公司｜Yahoo 與 FB 每月 CPL 與 ROI 追蹤（2014/12 – 2015/05）：FB CPL 從 555 元降到 192 元，Yahoo 從 1,398 元降到 1,050 元。名單數與金額已模糊處理。</figcaption></figure></div>
+      <p class="note">平台規則一直在變，現在我不再親自操作廣告帳戶。但因為自己做過，和代理商、SEO/GEO 廠商合作時，我能站在品牌方提出方向、看懂成效數據並快速配合調整，而不是被帶著走。</p>
+      <div class="tags"><span class="tag">Google 廣告</span><span class="tag">FB 廣告</span><span class="tag">成效優化</span><span class="tag">代理商協作</span></div>
+    </article>
+</div>
+    <div class="pager"><a id="prev" href="#">← 上一個案例</a><a id="next" href="#">下一個案例 →</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">本頁僅供求職使用，請勿轉載。案例中的公司資料已移除金額與內部資訊；社群與報名數字來自後台月報與報名問卷統計。</div>
+</footer>
+
+<script>
+(function(){
+  // month index from 2022-01
+  function m(y,mo){return (y-2022)*12+(mo-1);}
+  var series={
+    "chart-line":{title:"LINE 好友數",sub:"2023/03 接手 → 2026/11，約 6.9 倍",
+      pts:[[m(2023,3),2514],[m(2023,12),4199],[m(2024,12),7953],[m(2025,4),10822],[m(2026,11),17302]]},
+    "chart-fb":{title:"FB 追蹤數",sub:"2022/07 接手 → 2026/11，約 3.5 倍；接手前 5 個月幾乎持平",
+      pre:[[m(2022,1),5048],[m(2022,6),5146]],
+      pts:[[m(2022,7),5194],[m(2022,10),6185],[m(2022,12),7560],[m(2023,12),9738],[m(2024,12),12890],[m(2026,11),18352]]}
+  };
+  var W=460,H=210,L=44,R=60,T=24,B=26;
+  var x0=m(2022,1),x1=m(2026,11),yMax=20000;
+  function X(v){return L+(v-x0)/(x1-x0)*(W-L-R);}
+  function Y(v){return T+(1-v/yMax)*(H-T-B);}
+  function fmt(n){return n.toLocaleString("en-US");}
+  Object.keys(series).forEach(function(id){
+    var s=series[id],el=document.getElementById(id);
+    var css=getComputedStyle(document.documentElement);
+    var acc=css.getPropertyValue("--accent").trim(),line=css.getPropertyValue("--line").trim(),muted=css.getPropertyValue("--muted").trim();
+    var g='';
+    [0,5000,10000,15000,20000].forEach(function(v){
+      g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="'+line+'" stroke-width="1"/>';
+      g+='<text x="'+(L-6)+'" y="'+(Y(v)+4)+'" text-anchor="end">'+(v/1000)+'k</text>';
+    });
+    [2022,2023,2024,2025,2026].forEach(function(yr){
+      g+='<text x="'+X(m(yr,1))+'" y="'+(H-6)+'" text-anchor="middle">'+yr+'</text>';
+    });
+    var p=s.pts;
+    var area='M'+X(p[0][0])+','+Y(0)+' '+p.map(function(q){return 'L'+X(q[0])+','+Y(q[1]);}).join(' ')+' L'+X(p[p.length-1][0])+','+Y(0)+'Z';
+    g+='<path d="'+area+'" fill="'+acc+'" opacity="0.12"/>';
+    if(s.pre){g+='<polyline points="'+s.pre.concat([p[0]]).map(function(q){return X(q[0])+','+Y(q[1]);}).join(' ')+'" fill="none" stroke="'+muted+'" stroke-width="2" stroke-dasharray="4 4"/>';}
+    g+='<polyline points="'+p.map(function(q){return X(q[0])+','+Y(q[1]);}).join(' ')+'" fill="none" stroke="'+acc+'" stroke-width="2.5" stroke-linejoin="round"/>';
+    g+='<line x1="'+X(p[0][0])+'" x2="'+X(p[0][0])+'" y1="'+T+'" y2="'+Y(0)+'" stroke="'+muted+'" stroke-dasharray="2 3"/>';
+    g+='<text x="'+(X(p[0][0])+4)+'" y="'+(T+10)+'">接手</text>';
+    g+='<circle cx="'+X(p[0][0])+'" cy="'+Y(p[0][1])+'" r="3.5" fill="'+acc+'"/>';
+    var e=p[p.length-1];
+    g+='<circle cx="'+X(e[0])+'" cy="'+Y(e[1])+'" r="5" fill="'+acc+'"/>';
+    g+='<text class="end" x="'+(X(e[0])+8)+'" y="'+(Y(e[1])+4)+'">'+fmt(e[1])+'</text>';
+    g+='<text x="'+(X(p[0][0])+6)+'" y="'+(Y(p[0][1])+16)+'">'+fmt(p[0][1])+'</text>';
+    el.innerHTML='<h4>'+s.title+'</h4><p class="sub">'+s.sub+'</p><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+s.title+'：'+s.sub+'">'+g+'</svg>';
+  });
+})();
+
+(function(){
+  var wk=["9/14","9/21","9/28","10/5","10/12","10/19","10/26*"],a=[8,10,21,11,12,10,19],b=[1,7,7,6,6,3,9];
+  var el=document.getElementById("chart-iso"),css=getComputedStyle(document.documentElement);
+  var acc=css.getPropertyValue("--accent").trim(),warm=css.getPropertyValue("--warm").trim(),line=css.getPropertyValue("--line").trim();
+  var W=460,H=210,L=34,R=10,T=18,B=30,max=30,bw=38,gap=((W-L-R)-bw*7)/7;
+  function Y(v){return T+(1-v/max)*(H-T-B);}
+  var g="";
+  [0,10,20,30].forEach(function(v){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="'+line+'"/><text x="'+(L-6)+'" y="'+(Y(v)+4)+'" text-anchor="end">'+v+'</text>';});
+  wk.forEach(function(w,i){
+    var x=L+gap/2+i*(bw+gap),y1=Y(a[i]),y2=Y(a[i]+b[i]);
+    g+='<rect x="'+x+'" y="'+y1+'" width="'+bw+'" height="'+(Y(0)-y1)+'" fill="'+acc+'" rx="2"/>';
+    g+='<rect x="'+x+'" y="'+y2+'" width="'+bw+'" height="'+(y1-y2)+'" fill="'+warm+'" rx="2"/>';
+    g+='<text class="end" x="'+(x+bw/2)+'" y="'+(y2-5)+'" text-anchor="middle">'+(a[i]+b[i])+'</text>';
+    g+='<text x="'+(x+bw/2)+'" y="'+(H-10)+'" text-anchor="middle">'+w+'</text>';
+  });
+  el.innerHTML='<h4>上架後每週訂單數</h4><p class="sub">共 130 筆；單課 91 筆、組合學程 39 筆（週起始日；*為 6 天資料）</p><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="ISO 9001 轉版課程上架後每週訂單數，共 130 筆">'+g+'</svg><div class="legend"><span><i style="background:'+acc+'"></i>單課</span><span><i style="background:'+warm+'"></i>9001＋14001 組合學程</span></div>';
+})();
+
+(function(){
+  var order=["academy","iso","coupon","line","podcast","ai","ta","sunon","ads"],home=document.getElementById("home"),view=document.getElementById("case-view");
+  function route(){
+    var h=location.hash.slice(1);
+    if(h.indexOf("case-")===0&&document.getElementById("d-"+h)){
+      home.hidden=true;view.hidden=false;
+      [].forEach.call(document.querySelectorAll(".dview"),function(d){d.hidden=(d.id!=="d-"+h);});
+      var i=order.indexOf(h.slice(5)),p=document.getElementById("prev"),n=document.getElementById("next");
+      p.href="#case-"+order[(i+order.length-1)%order.length];n.href="#case-"+order[(i+1)%order.length];
+      window.scrollTo(0,0);
+    }else{
+      view.hidden=true;home.hidden=false;
+      if(h){var t=document.getElementById(h);if(t)t.scrollIntoView();}
+    }
+  }
+  window.addEventListener("hashchange",route);route();
+  var c=document.getElementById("copy");
+  if(c)c.addEventListener("click",function(){
+    var msg=document.getElementById("copied");
+    try{navigator.clipboard.writeText("claire30212@gmail.com").then(function(){msg.textContent="已複製";},function(){msg.textContent="請手動選取上方的 Email";});}
+    catch(e){msg.textContent="請手動選取上方的 Email";}
+  });
+})();
+(function(){
+  var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els=document.querySelectorAll(".rv");
+  function countUp(root){
+    [].forEach.call(root.querySelectorAll("[data-count]"),function(b){
+      if(rm)return;var to=+b.getAttribute("data-count"),t0=null;
+      function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/900);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step);}
+      b.textContent="0";requestAnimationFrame(step);
+    });
+  }
+  if("IntersectionObserver" in window&&!rm){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");countUp(e.target);io.unobserve(e.target);}});},{threshold:.2});
+    [].forEach.call(els,function(el){io.observe(el);});
+  }else{[].forEach.call(els,function(el){el.classList.add("in");});}
+  var tabs=[].slice.call(document.querySelectorAll(".tl-seg"));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});}
+  tabs.forEach(function(t,i){
+    t.addEventListener("click",function(){sel(t);});
+    t.addEventListener("keydown",function(e){var d=e.key==="ArrowRight"||e.key==="ArrowDown"?1:e.key==="ArrowLeft"||e.key==="ArrowUp"?-1:0;if(d){e.preventDefault();var n=tabs[(i+d+tabs.length)%tabs.length];sel(n);n.focus();}});
+  });
+  sel(document.getElementById("tab-s3"));
+})();
+(function(){[].forEach.call(document.querySelectorAll(".an-jump a"),function(a){a.addEventListener("click",function(e){e.preventDefault();var t=document.getElementById(a.getAttribute("href").slice(1));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});});})();
+(function(){
+  var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var bar=document.querySelector(".progress");
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?h.scrollTop/max*100:0)+"%";}
+  window.addEventListener("scroll",prog,{passive:true});prog();
+  var links={};[].forEach.call(document.querySelectorAll("nav ul a"),function(a){links[a.getAttribute("href").slice(1)]=a;});
+  if(!("IntersectionObserver" in window))return;
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.toggle("on",k===e.target.id);});}});},{rootMargin:"-45% 0px -50% 0px"});
+  Object.keys(links).forEach(function(k){var el=document.getElementById(k);if(el)so.observe(el);});
+  if(rm)return;
+  var groups=[["#home .sec-head",0],["#work .intro",0],[".cgrid .ccard",.07],[".vids .vid",.06],[".works .work",.08]];
+  var targets=[];
+  groups.forEach(function(g){[].forEach.call(document.querySelectorAll(g[0]),function(el,i){el.classList.add("rvx");el.style.setProperty("--d",((i%3)*g[1])+"s");targets.push(el);});});
+  function count(el){
+    var t=el.textContent.trim(),m=t.match(/^([\d,]+(?:\.\d+)?)(%|×)?$/);if(!m)return;
+    var raw=m[1].replace(/,/g,""),to=parseFloat(raw),dec=(raw.split(".")[1]||"").length,comma=m[1].indexOf(",")>-1,suf=m[2]||"",t0=null;
+    function f(v){var x=v.toFixed(dec);if(comma)x=Number(x).toLocaleString("en-US");return x+suf;}
+    function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1000);el.textContent=f(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step);else el.textContent=t;}
+    requestAnimationFrame(step);
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");var b=e.target.querySelector&&e.target.querySelector(".cbig");if(b)count(b);io.unobserve(e.target);}});},{threshold:.15});
+  targets.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
